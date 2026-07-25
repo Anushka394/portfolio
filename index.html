@@ -403,7 +403,7 @@
   .extra-role{font-family:'Times New Roman', Times, serif;font-size:11px;color:var(--chrome-2);margin-bottom:10px;display:block;}
   .extra-desc{color:var(--muted);font-size:13.5px;line-height:1.6;}
 
-  /* achievements / PUBLICATION */
+  /* Achievements / PUBLICATION */
   .award-card{
     border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:14px;
     display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;
@@ -473,7 +473,7 @@
     <li><a href="#skills" data-link="skills">SKILLS</a></li>
     <li><a href="#experience" data-link="experience">EXPERIENCE</a></li>
     <li><a href="#projects" data-link="projects">PROJECTS</a></li>
-    <li><a href="#achievements" data-link="achievements">achievements</a></li>
+    <li><a href="#Achievements" data-link="Achievements">Achievements</a></li>
     <li><a href="#contact" data-link="contact">CONTACT</a></li>
   </ul>
 </nav>
@@ -547,10 +547,10 @@
     <div class="cert-grid reveal-stagger" id="cert-grid"></div>
   </section>
 
-  <!-- achievements & PUBLICATIONS -->
-  <section class="pad" id="achievements">
-    <div class="section-head reveal"><span class="section-num">10</span><span class="section-title">achievements &amp; Publications</span><span class="section-line"></span></div>
-    <div id="achievements-list" class="reveal-stagger"></div>
+  <!-- Achievements & PUBLICATIONS -->
+  <section class="pad" id="Achievements">
+    <div class="section-head reveal"><span class="section-num">10</span><span class="section-title">Achievements &amp; Publications</span><span class="section-line"></span></div>
+    <div id="Achievements-list" class="reveal-stagger"></div>
   </section>
 
   <!-- EDUCATION -->
@@ -573,7 +573,7 @@
       </div>
       <div class="footer-col">
         <h5>Reach Out</h5>
-        <button class="copy-btn" id="copy-email">bhandarianushka10@gmail.com</button>
+        <button class="copy-btn" id="copy-email">bhandarianushka05@gmail.com</button>
         <p>+91 89790 94858</p>
         <a href="https://github.com/Anushka394" target="_blank" rel="noopener">github.com/Anushka394</a>
       </div>
@@ -590,7 +590,7 @@ const data = {
   social: {
     github: "https://github.com/Anushka394",
     linkedin: "https://www.linkedin.com/in/anushka-bhandari-83010828b",
-    email: "bhandarianushka10@gmail.com",
+    email: "bhandarianushka05@gmail.com",
     phone: "+918979094858"
   },
   skills: [
@@ -701,7 +701,7 @@ const data = {
     { issuer: "Indian Institute of Remote Sensing", name: "Workshop on Advanced Image Analysis for Geospatial Professionals", link: "https://drive.google.com/file/d/1nbDksrvrxfwbdBNInnIaIx6m5WOvLmTZ/view?usp=drive_link" },
     { issuer: "Reliance Foundation", name: "Training in Internet of Things (IoT)", link: "https://drive.google.com/file/d/1PDe-xL11AOSPUdnkVVLTBOppr3GECyCy/view?usp=sharing" }
   ],
-  achievements: [
+  Achievements: [
     { icon: "★", title: "Meritorious Student, 2024–2026", meta: "Vellore Institute of Technology, Chennai", desc: "Secured 2nd position for maintaining academic excellence for two consecutive years." },
     { icon: "◆", title: "Advanced Error Characterization and Polynomial Calibration of Soil Moisture Sensors: A Comprehensive Comparative Study", meta: "Research Paper · IEEE Xplore", desc: "Conducted a comparative study applying advanced error characterization and polynomial calibration models in MATLAB to improve soil moisture sensor accuracy and reliability across environmental conditions." }
   ],
@@ -859,7 +859,7 @@ document.getElementById('cert-grid').innerHTML = data.certifications.map(c => `
   </a>
 `).join('');
 
-document.getElementById('achievements-list').innerHTML = data.achievements.map(a => `
+document.getElementById('Achievements-list').innerHTML = data.Achievements.map(a => `
   <div class="award-card tilt tilt-3d">
     <div class="award-icon">${a.icon}</div>
     <div>
@@ -1017,7 +1017,7 @@ document.getElementById('copy-email').addEventListener('click', function(){
   revealEls.forEach(el => io.observe(el));
 
   /* --- Nav active-section highlighting --- */
-  const sections = ['about','skills','experience','projects','achievements','contact']
+  const sections = ['about','skills','experience','projects','Achievements','contact']
     .map(id => document.getElementById(id)).filter(Boolean);
   const navLinks = document.querySelectorAll('#navlinks a');
   const sectionIO = new IntersectionObserver((entries)=>{
