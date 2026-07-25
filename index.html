@@ -403,7 +403,7 @@
   .extra-role{font-family:'Times New Roman', Times, serif;font-size:11px;color:var(--chrome-2);margin-bottom:10px;display:block;}
   .extra-desc{color:var(--muted);font-size:13.5px;line-height:1.6;}
 
-  /* AWARDS / PUBLICATION */
+  /* achievements / PUBLICATION */
   .award-card{
     border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:14px;
     display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;
@@ -473,7 +473,7 @@
     <li><a href="#skills" data-link="skills">SKILLS</a></li>
     <li><a href="#experience" data-link="experience">EXPERIENCE</a></li>
     <li><a href="#projects" data-link="projects">PROJECTS</a></li>
-    <li><a href="#awards" data-link="awards">AWARDS</a></li>
+    <li><a href="#achievements" data-link="achievements">achievements</a></li>
     <li><a href="#contact" data-link="contact">CONTACT</a></li>
   </ul>
 </nav>
@@ -547,10 +547,10 @@
     <div class="cert-grid reveal-stagger" id="cert-grid"></div>
   </section>
 
-  <!-- AWARDS & PUBLICATIONS -->
-  <section class="pad" id="awards">
-    <div class="section-head reveal"><span class="section-num">10</span><span class="section-title">Awards &amp; Publications</span><span class="section-line"></span></div>
-    <div id="awards-list" class="reveal-stagger"></div>
+  <!-- achievements & PUBLICATIONS -->
+  <section class="pad" id="achievements">
+    <div class="section-head reveal"><span class="section-num">10</span><span class="section-title">achievements &amp; Publications</span><span class="section-line"></span></div>
+    <div id="achievements-list" class="reveal-stagger"></div>
   </section>
 
   <!-- EDUCATION -->
@@ -596,22 +596,11 @@ const data = {
   skills: [
     { name: "Programming", items: ["Java","Python","JavaScript","C"] },
     { name: "Full-Stack Development", items: ["Java","Spring Boot","React.js","REST APIs","HTML","CSS"] },
-    { name: "Data Science & ML", items: ["NumPy","Scikit-learn","Pandas","Matplotlib"] },
-    { name: "Hardware & Embedded Systems", items: ["PCB Layout (EasyEDA, KiCad)","Verilog (FPGA)","Arduino","ESP32","MATLAB","Simulink"] },
+    { name: "Python Libraries & Frameworks", items: ["NumPy","Scikit-learn","Pandas","Matplotlib","Streamlit"] },
+    { name: "Hardware & Embedded Systems", items: ["PCB Design (EasyEDA, KiCad)","Verilog (FPGA)","Arduino","ESP32","MATLAB","Simulink"] },
     { name: "Databases & Tools", items: ["MySQL","H2","Git"] }
   ],
   experience: [
-    {
-      company: "Flyrank",
-      role: "Backend AI Intern",
-      period: "06/2026 - Present",
-      location: "Remote",
-      summary: "Deploying backend services to integrate AI models into core APIs.",
-      highlights: [
-        "Designing scalable server-side systems to clean, process, and pipe high-volume data streams for model training and real-time inference.",
-        "Collaborating on database management and cloud infrastructure optimizations."
-      ]
-    },
     {
       company: "Bharat Heavy Electricals Limited",
       role: "Vocational Trainee",
@@ -622,8 +611,30 @@ const data = {
         "Gained exposure to manufacturing, testing, and operational procedures for high-capacity electrical machinery.",
         "Studied quality control standards and safety protocols within a large-scale power facility."
       ]
+    },
+    {
+      company: "Flyrank",
+      role: "Backend AI Intern",
+      period: "06/2026 - Present",
+      location: "Remote",
+      summary: "Deploying backend services to integrate AI models into core APIs.",
+      highlights: [
+        "Working on backend AI engineering concepts, including server-side development, API integration, and data model design.",
+        "Developing knowledge of scalable backend architectures, modern software engineering practices, and theintegration of AI capabilities into production applications."
+      ]
+    },
+    {
+      company: "Nayoda",
+      role: "Full-Stack Development Intern",
+      period: "06/2026 - 07/2026",
+      location: "Remote",
+      summary: "Worked with the MERN stack to understand full-stack application development.",
+      highlights: [
+        "Built frontend interfaces and backend services connected through REST API integration.",
+        "Worked on database connectivity to support end-to-end application features."
+        ]
     }
-  ],
+    ],
   simulations: [
     {
       company: "JPMorgan Chase & Co.",
@@ -690,7 +701,7 @@ const data = {
     { issuer: "Indian Institute of Remote Sensing", name: "Workshop on Advanced Image Analysis for Geospatial Professionals", link: "https://drive.google.com/file/d/1nbDksrvrxfwbdBNInnIaIx6m5WOvLmTZ/view?usp=drive_link" },
     { issuer: "Reliance Foundation", name: "Training in Internet of Things (IoT)", link: "https://drive.google.com/file/d/1PDe-xL11AOSPUdnkVVLTBOppr3GECyCy/view?usp=sharing" }
   ],
-  awards: [
+  achievements: [
     { icon: "★", title: "Meritorious Student, 2024–2026", meta: "Vellore Institute of Technology, Chennai", desc: "Secured 2nd position for maintaining academic excellence for two consecutive years." },
     { icon: "◆", title: "Advanced Error Characterization and Polynomial Calibration of Soil Moisture Sensors: A Comprehensive Comparative Study", meta: "Research Paper · IEEE Xplore", desc: "Conducted a comparative study applying advanced error characterization and polynomial calibration models in MATLAB to improve soil moisture sensor accuracy and reliability across environmental conditions." }
   ],
@@ -704,7 +715,7 @@ const data = {
     {
       title: "Task Manager Application",
       subtitle: "Full-stack task management, built end to end",
-      description: "A secure task manager with JWT authentication and a dashboard that auto-detects overdue tasks, with filtering and sorting by status or priority. Each user can only see and edit their own data.",
+      description: "A secure task manager with JWT authentication and a dashboard that auto-detects overdue tasks, with filtering and sorting by status or priority.",
       stack: ["Java","Spring Boot","React.js","H2"],
       role: "Full-stack Developer", year: "2026",
       link: "https://github.com/Anushka394/task-manager-backend",
@@ -718,14 +729,6 @@ const data = {
       role: "Full-stack Developer", year: "2026",
       link: "https://github.com/Anushka394/decision-comparator-tool",
       highlight: false
-    },
-    {
-      title: "E-Commerce REST API",
-      subtitle: "Stateless backend for a storefront",
-      description: "Catalogue browsing, cart management, and role-based admin access with paginated product search and category filtering. Each customer can only access and modify their own profile and cart.",
-      stack: ["Java","Spring Boot","REST APIs","MySQL"],
-      role: "Backend Developer", year: "2025",
-      link: "https://github.com/Anushka394/E-commerce-project-backend", highlight: false
     },
     {
       title: "Cyberpunk Snake",
@@ -856,7 +859,7 @@ document.getElementById('cert-grid').innerHTML = data.certifications.map(c => `
   </a>
 `).join('');
 
-document.getElementById('awards-list').innerHTML = data.awards.map(a => `
+document.getElementById('achievements-list').innerHTML = data.achievements.map(a => `
   <div class="award-card tilt tilt-3d">
     <div class="award-icon">${a.icon}</div>
     <div>
@@ -1014,7 +1017,7 @@ document.getElementById('copy-email').addEventListener('click', function(){
   revealEls.forEach(el => io.observe(el));
 
   /* --- Nav active-section highlighting --- */
-  const sections = ['about','skills','experience','projects','awards','contact']
+  const sections = ['about','skills','experience','projects','achievements','contact']
     .map(id => document.getElementById(id)).filter(Boolean);
   const navLinks = document.querySelectorAll('#navlinks a');
   const sectionIO = new IntersectionObserver((entries)=>{
