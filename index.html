@@ -546,16 +546,22 @@
     <div class="section-head reveal"><span class="section-num">09</span><span class="section-title">Courses &amp; Certifications</span><span class="section-line"></span></div>
     <div class="cert-grid reveal-stagger" id="cert-grid"></div>
   </section>
+  
+  <!-- COMPETITIVE CODING -->
+<section class="pad" id="coding">
+  <div class="section-head reveal"><span class="section-num">10</span><span class="section-title">Competitive Coding</span><span class="section-line"></span></div>
+  <div class="cert-grid reveal-stagger" id="coding-grid"></div>
+</section>
 
   <!-- Achievements & PUBLICATIONS -->
   <section class="pad" id="Achievements">
-    <div class="section-head reveal"><span class="section-num">10</span><span class="section-title">Achievements &amp; Publications</span><span class="section-line"></span></div>
+    <div class="section-head reveal"><span class="section-num">11</span><span class="section-title">Achievements &amp; Publications</span><span class="section-line"></span></div>
     <div id="Achievements-list" class="reveal-stagger"></div>
   </section>
 
   <!-- EDUCATION -->
   <section class="pad" id="education">
-    <div class="section-head reveal"><span class="section-num">11</span><span class="section-title">Education</span><span class="section-line"></span></div>
+    <div class="section-head reveal"><span class="section-num">12</span><span class="section-title">Education</span><span class="section-line"></span></div>
     <div id="education-list" class="reveal-stagger"></div>
   </section>
 
@@ -619,8 +625,7 @@ const data = {
       location: "Remote",
       summary: "Deploying backend services to integrate AI models into core APIs.",
       highlights: [
-        "Working on backend AI engineering concepts, including server-side development, API integration, and data model design.",
-        "Developing knowledge of scalable backend architectures, modern software engineering practices, and theintegration of AI capabilities into production applications."
+        "Working on backend AI engineering concepts, including server-side development, API integration, and data model design.Developing knowledge of scalable backend architectures, modern software engineering practices, and theintegration of AI capabilities into production applications - <a href=\"https://github.com/Anushka394/flyrank\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--chrome-2);text-decoration:underline;\">github.com/Anushka394/flyrank</a>""
       ]
     },
     {
@@ -700,6 +705,10 @@ const data = {
     { issuer: "Indian Institute of Remote Sensing", name: "Workshop on Advanced Image Analysis for Geospatial Professionals", link: "https://drive.google.com/file/d/1nbDksrvrxfwbdBNInnIaIx6m5WOvLmTZ/view?usp=drive_link" },
     { issuer: "Reliance Foundation", name: "Training in Internet of Things (IoT)", link: "https://drive.google.com/file/d/1PDe-xL11AOSPUdnkVVLTBOppr3GECyCy/view?usp=sharing" }
   ],
+  coding: [
+  { platform: "LeetCode", handle: "Anushkabhandari24", link: "https://leetcode.com/u/Anushkabhandari24/" },
+  { platform: "CodeChef", handle: "anushka2023", link: "https://www.codechef.com/users/anushka2023" }
+],
   Achievements: [
     { icon: "★", title: "Meritorious Student, 2024–2026", meta: "Vellore Institute of Technology, Chennai", desc: "Secured 2nd position for maintaining academic excellence for two consecutive years." },
     { icon: "◆", title: "Advanced Error Characterization and Polynomial Calibration of Soil Moisture Sensors: A Comprehensive Comparative Study", meta: "Research Paper · IEEE Xplore", desc: "Conducted a comparative study applying advanced error characterization and polynomial calibration models in MATLAB to improve soil moisture sensor accuracy and reliability across environmental conditions." }
@@ -857,7 +866,13 @@ document.getElementById('cert-grid').innerHTML = data.certifications.map(c => `
     <span class="cert-link">View certificate ↗</span>
   </a>
 `).join('');
-
+document.getElementById('coding-grid').innerHTML = data.coding.map(c => `
+  <a class="cert-card tilt tilt-3d" href="${c.link}" target="_blank" rel="noopener">
+    <span class="cert-issuer">${c.platform}</span>
+    <span class="cert-name">${c.handle}</span>
+    <span class="cert-link">View profile ↗</span>
+  </a>
+`).join('');
 document.getElementById('Achievements-list').innerHTML = data.Achievements.map(a => `
   <div class="award-card tilt tilt-3d">
     <div class="award-icon">${a.icon}</div>
