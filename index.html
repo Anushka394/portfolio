@@ -647,6 +647,7 @@ const data = {
       period: "Forage · 2026",
       location: "Remote",
       summary: "Simulated a transaction-processing microservice for a global bank.",
+      link: "https://drive.google.com/file/d/1UkFAPXAAub70CsJ1axS6WdnuSjzic6Am/view?usp=drive_link",
       highlights: [
         "Integrated Kafka into a Spring Boot microservice to consume and deserialize high-volume transaction messages using a configurable topic and embedded Kafka test framework.",
         "Implemented transaction validation and persistence logic with Spring Data JPA and an H2 SQL database, including entity modeling and balance updates across relational User records.",
@@ -661,6 +662,7 @@ const data = {
       period: "Forage · 2026",
       location: "Remote",
       summary: "Designed a data model for a financial portfolio management system.",
+      link: "https://drive.google.com/file/d/1hLBdke1oA7IC7A7-ZMMdSg1Scw9PmVPD/view?usp=drive_link",
       highlights: [
         "Understood the relevant requirements for building a system to manage financial portfolios.",
         "Figured out what data the system needed to keep track of.",
@@ -674,6 +676,7 @@ const data = {
       period: "Forage · 2026",
       location: "Remote",
       summary: "Advised a hypothetical Aerospace team at GE on next-generation propulsion design.",
+      link: "https://drive.google.com/file/d/1vARcoLXzLOTtbGziqWn23XgTjS9fVUb3/view?usp=sharing",
       highlights: [
         "Analyzed and compared diverse energy sources for propulsion systems, including cost, energy density, storage requirements, and their impact on design decisions.",
         "Conducted in-depth research on bypass ratio and compression ratio and their impact on turbofan engine design, including fan diameter, noise, installation, material limitations, and emissions.",
@@ -837,6 +840,7 @@ document.getElementById('simulations-list').innerHTML = data.simulations.map((e,
       </div>
       <p class="exp-summary">${e.summary}</p>
       <ul class="exp-highlights">${e.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
+      ${e.link ? `<a href="${e.link}" target="_blank" rel="noopener" class="project-link" style="margin-top:14px;">View Certificate →</a>` : ''}
     </div>
   </div>
 `).join('');
