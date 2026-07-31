@@ -610,6 +610,7 @@ const data = {
   experience: [
     {
       company: "Bharat Heavy Electricals Limited",
+      link: "https://drive.google.com/file/d/1vGoSgmTLGlLScK22Wq4z_xjfO5cjtbJC/view?usp=drive_link",
       role: "Vocational Trainee",
       period: "06/2025 - 07/2025",
       location: "Haridwar, Uttarakhand",
@@ -703,6 +704,7 @@ const data = {
   ],
   certifications: [
     { issuer: "Oracle", name: "Cloud Infrastructure 2025 Certified AI Foundations Associate", link: "https://drive.google.com/file/d/1VH-4ZB2tf-EYXAXftWJ_f5m-ORrfDHlE/view?usp=drive_link" },
+    { issuer: "Anthropic", name: "AI Fluency:Framework and Foundations", link: "https://drive.google.com/file/d/1l5h7bWwA5CvfiLoPheIfG5pkXuzbrwY5/view?usp=drive_link" },
     { issuer: "Google Skills", name: "Fundamentals of Digital Marketing", link: "https://drive.google.com/file/d/1cSHDww21CUk2UzmoMLO7XgUTnzMql512/view?usp=drive_link" },
     { issuer: "Cisco Networking Academy", name: "Course on Networking Basics", link: "https://drive.google.com/file/d/1IA4MiyWVydCVJoBRDe3wKzFUtpSD27Vb/view?usp=drive_link" },
     { issuer: "Scaler", name: "A Structured Java DSA Program", link: "https://drive.google.com/file/d/1i9dCgzY3A69U6NEQspzflVozgy14GMzk/view?usp=sharing" },
@@ -825,6 +827,7 @@ document.getElementById('experience-list').innerHTML = data.experience.map((e,i)
       </div>
       <p class="exp-summary">${e.summary}</p>
       <ul class="exp-highlights">${e.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
+      ${e.link ? `<a href="${e.link}" target="_blank" rel="noopener" class="project-link" style="margin-top:14px;">View Certificate →</a>` : ''}
     </div>
   </div>
 `).join('');
